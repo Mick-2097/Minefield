@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="minesweeper.css">
+    <title>Minefield</title>
+</head>
+<body>
+    <div class="display">
+        <div class="row">
+            <div class="settings">
+                <label class="radio" for="10">Beginner
+                    <input class="input" type="radio" name="difficulty" id="10">
+                </label>
+                <label class="radio" for="20">Intermediate
+                    <input class="input" type="radio" name="difficulty" id="20">
+                </label>
+                <label class="radio" for="30">Advanced
+                    <input class="input" type="radio" name="difficulty" id="30">
+                </label>
+            </div>
+            <button class="button" type="button">New game</button>
+        </div>
+        <h1 class="score"></h1>
+    </div>
+    <div class="minefield">
+    </div>
+    <div class="display-bottom">
+        <h2 class="flags"></h2>
+        <img class="flag-icon" src="/flagged.svg" alt="">
+    </div>
+
+    <script src="minesweeper.js"></script>
+</body>
+</html>
