@@ -186,7 +186,6 @@ let buildBoard = () => {
         }
     }
 }
-buildBoard()
 
 //      Track flags while in game
 let checkFlags = () => {
@@ -302,7 +301,7 @@ let gameOver = () => {
     //     Stop game board interaction
     board.forEach(x => x.classList.add('disabled'))
 
-    //      Calculate and display score
+    //      Calculate score
     let total = 0
     let bombs = 0
     board.forEach (x => {
@@ -312,9 +311,16 @@ let gameOver = () => {
             total++
         }
     })
-    score.textContent = `You flagged ${total} of ${bombs} mines`
-    score.style.opacity = '1'
-    newGame.classList.add('highlight')
+    //  Display score
+    if (total === bombs) {
+        score.textContent = `Congratulations you flagged all ${total} of ${bombs} mines`
+        score.style.opacity = '1'
+        newGame.classList.add('highlight')
+    } else {
+        score.textContent = `You flagged ${total} of ${bombs} mines`
+        score.style.opacity = '1'
+        newGame.classList.add('highlight')
+    }
 }
 
 //      New game button

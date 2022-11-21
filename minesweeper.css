@@ -61,7 +61,7 @@ body {
     width: 100%;
     display: flex;
     gap: 1rem;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding: 1rem 6rem;
 }
@@ -130,6 +130,7 @@ div .hint {
 .flags {
     width: 100px;
     height: 3rem;
+    margin-left: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
