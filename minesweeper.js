@@ -5,6 +5,7 @@ let flags = document.querySelector('.flags')
 let flagIcon = document.querySelector('.flag-icon')
 let settings = document.querySelectorAll('.input')
 let boardWidth = 30
+
 let setWidth = () => {
     settings.forEach (x => {
         if (x.checked) boardWidth = (+x.id)
@@ -311,7 +312,7 @@ let gameOver = () => {
             total++
         }
     })
-    //  Display score
+    //      Display score
     if (total === bombs) {
         score.textContent = `Congratulations you flagged all ${total} of ${bombs} mines`
         score.style.opacity = '1'
